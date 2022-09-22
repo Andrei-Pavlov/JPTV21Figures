@@ -17,7 +17,6 @@ public class JPTV21Figures {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         OUTER:
         do {
             System.out.println("Выберите номер функции: ");
@@ -25,6 +24,7 @@ public class JPTV21Figures {
             System.out.println("2.Не заполненый квадрат: ");
             System.out.println("3.Найти указаную подстроку в тексте: ");
             System.out.println("4.Заменить указанную подстроку на другую подстроку: ");
+            Scanner scanner = new Scanner(System.in);
             int numberFunction = scanner.nextInt();
             Scanner first = new Scanner(System.in);
             Scanner second = new Scanner(System.in);
@@ -45,8 +45,39 @@ public class JPTV21Figures {
                     }
                     break;
                 case 2:
-                    System.out.println("Вы выбрали функцию 2");         
+                    System.out.println("Вы выбрали функцию 2"); 
+                    for (int i = 0; i < firs; i++){
+                        for (int j = 0; j < firs; j++){
+                            System.out.print(" * ");
+                            if (i == 0 || i == figures.length - 1 || j == 0 || j == figures.length - 1 ){
+                                System.out.print("*");
+
+                            } else {
+                                System.out.print(" ");
+                            }
+                        }
+                        System.out.println(" ");
+                    }
                     break;
+                case 3:
+                    System.out.println("Вы выбрали функцию 3");
+                        int n=5;
+                    for(int i=0;i<n;i++)
+                    {
+
+                        for(int j=0;j<=n-i;j++)
+                        {
+
+                            System.out.print(" ");
+                        }
+
+                        for(int k=0;k<=2*i;k++)
+                        {
+                        System.out.print("*");
+                        }
+
+                        System.out.println("");
+                    }
                 default:
                     break;
                 }
